@@ -16,8 +16,8 @@ from PIL import Image
 # ==========================
 POPPLER_BIN = os.environ.get("POPPLER_BIN")
 TESSERACT_EXE = os.environ.get("TESSERACT_CMD")
-GEMINI_API_URL = os.environ.get("GEMIhttps://aistudio.google.com/api-keysNI_API_URL")
-GEMINI_API_KEY = os.environ.get("AIzaSyAmmYdPLsOpwf-W3on2Kw7P080MsoLqZf8GEMINI_API_KEY")
+GEMINI_API_URL = os.environ.get("GEMINI_API_URL")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-pro")
 GEMINI_OCR_PROMPT = os.environ.get("GEMINI_OCR_PROMPT", "Please extract all textual content from the provided invoice page image. Return only the plain extracted text preserving line breaks. Do not add commentary or labels.")
 
@@ -275,3 +275,4 @@ async def extract_bill_data(req: ExtractRequest):
             "sum_total": total_amt
         }
     }
+
